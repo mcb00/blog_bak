@@ -40,6 +40,13 @@ In this post we'll take a look at how we can establish a clean, readable, and ea
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Here's some other text.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <table>
 <thead><tr>
 <th>description</th>
@@ -50,33 +57,33 @@ In this post we'll take a look at how we can establish a clean, readable, and ea
 <tbody>
 <tr>
 <td>filter rows based on data values</td>
-<td>filter()</td>
-<td>query()</td>
+<td><code>filter()</code></td>
+<td><code>query()</code></td>
 </tr>
 <tr>
 <td>sort rows based on data values</td>
-<td>arrange()</td>
-<td>sort_values()</td>
+<td><code>arrange()</code></td>
+<td><code>sort_values()</code></td>
 </tr>
 <tr>
-<td>select columns by</td>
-<td>select()</td>
-<td>filter()</td>
+<td>select columns by name</td>
+<td><code>select()</code></td>
+<td><code>filter()</code></td>
 </tr>
 <tr>
 <td>add new columns based on the existing columns</td>
-<td>mutate()</td>
-<td>assign()</td>
+<td><code>mutate()</code></td>
+<td><code>assign()</code></td>
 </tr>
 <tr>
 <td>create grouped summaries of the dataset</td>
-<td>group_by() <br> summarise()</td>
-<td>groupby() <br> apply()</td>
+<td><code>group_by()</code> <br> <code>summarise()</code></td>
+<td><code>groupby()</code> <br> <code>apply()</code></td>
 </tr>
 <tr>
 <td>chain operations together</td>
-<td>%&gt;%</td>
-<td>.</td>
+<td><code>%&gt;%</code></td>
+<td><code>.</code></td>
 </tr>
 </tbody>
 </table>
