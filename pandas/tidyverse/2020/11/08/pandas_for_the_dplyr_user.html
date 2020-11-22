@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>pandas essentials for the tidyverse aficionado | random.realizations</title>
+<title>pandas essentials for the tidyverse aficionado | Random Realizations</title>
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="pandas essentials for the tidyverse aficionado" />
 <meta property="og:locale" content="en_US" />
@@ -12,13 +12,13 @@
 <meta property="og:description" content="A tutorial for writing tidy pandas code inspired by R and the tidyverse" />
 <link rel="canonical" href="https://mattcbowers.github.io/blog/pandas/tidyverse/2020/11/08/pandas_for_the_dplyr_user.html" />
 <meta property="og:url" content="https://mattcbowers.github.io/blog/pandas/tidyverse/2020/11/08/pandas_for_the_dplyr_user.html" />
-<meta property="og:site_name" content="random.realizations" />
+<meta property="og:site_name" content="Random Realizations" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-11-08T00:00:00-06:00" />
 <script type="application/ld+json">
 {"description":"A tutorial for writing tidy pandas code inspired by R and the tidyverse","url":"https://mattcbowers.github.io/blog/pandas/tidyverse/2020/11/08/pandas_for_the_dplyr_user.html","@type":"BlogPosting","headline":"pandas essentials for the tidyverse aficionado","dateModified":"2020-11-08T00:00:00-06:00","datePublished":"2020-11-08T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mattcbowers.github.io/blog/pandas/tidyverse/2020/11/08/pandas_for_the_dplyr_user.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mattcbowers.github.io/blog/feed.xml" title="random.realizations" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mattcbowers.github.io/blog/feed.xml" title="Random Realizations" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
 <script>
@@ -53,7 +53,7 @@ window.onload = wrap_img;
 </head>
 <body><header class="site-header">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">random.realizations</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Random Realizations</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -103,12 +103,7 @@ window.onload = wrap_img;
     </a>
 </div>
 
-          <div class="px-2">
-    <a href="https://mybinder.org/v2/gh//blog/master?filepath=_notebooks%2F2020-11-08-pandas_for_the_dplyr_user.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/blog/assets/badges/binder.svg" alt="Open In Binder"/>
-    </a>
-</div>
-
+          
           <div class="px-2">
     <a href="https://colab.research.google.com/github//blog/blob/master/_notebooks/2020-11-08-pandas_for_the_dplyr_user.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
@@ -148,6 +143,13 @@ In this post we'll take a look at how we can establish a clean, readable, and ea
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Here's some other text.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <table>
 <thead><tr>
 <th>description</th>
@@ -158,33 +160,33 @@ In this post we'll take a look at how we can establish a clean, readable, and ea
 <tbody>
 <tr>
 <td>filter rows based on data values</td>
-<td>filter()</td>
-<td>query()</td>
+<td><code>filter()</code></td>
+<td><code>query()</code></td>
 </tr>
 <tr>
 <td>sort rows based on data values</td>
-<td>arrange()</td>
-<td>sort_values()</td>
+<td><code>arrange()</code></td>
+<td><code>sort_values()</code></td>
 </tr>
 <tr>
-<td>select columns by</td>
-<td>select()</td>
-<td>filter()</td>
+<td>select columns by name</td>
+<td><code>select()</code></td>
+<td><code>filter()</code></td>
 </tr>
 <tr>
 <td>add new columns based on the existing columns</td>
-<td>mutate()</td>
-<td>assign()</td>
+<td><code>mutate()</code></td>
+<td><code>assign()</code></td>
 </tr>
 <tr>
 <td>create grouped summaries of the dataset</td>
-<td>group_by() <br /> summarise()</td>
-<td>groupby() <br /> apply()</td>
+<td><code>group_by()</code> <br /> <code>summarise()</code></td>
+<td><code>groupby()</code> <br /> <code>apply()</code></td>
 </tr>
 <tr>
 <td>chain operations together</td>
-<td>%&gt;%</td>
-<td>.</td>
+<td><code>%&gt;%</code></td>
+<td><code>.</code></td>
 </tr>
 </tbody>
 </table>
@@ -1063,7 +1065,7 @@ Remember that part of the beauty of pandas is that since there are so many ways 
         </p>
       </div>
       <div class="footer-col">
-        <p>A blog about data science, statistics, computing, and empirical skepticisim.</p>
+        <p>A blog about data science, statistics, machine learning, and the scientific method.</p>
       </div>
     </div>
 
