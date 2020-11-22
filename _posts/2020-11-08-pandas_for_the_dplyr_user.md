@@ -6,6 +6,7 @@ toc: false
 badges: true
 comments: true
 categories: [pandas, tidyverse]
+hide: true
 nb_path: _notebooks/2020-11-08-pandas_for_the_dplyr_user.ipynb
 layout: notebook
 ---
