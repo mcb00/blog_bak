@@ -1,10 +1,11 @@
 ---
 toc: false
 layout: post
-description: 
+title: Hello World! And Why I'm Inspired to Start a Blog
+description: A reflection on what inspired me to start a blog and three reasons I think it could be a good idea.
 categories: 
-title: Hello World, and Why I'm Inspired to Start a Blog
-image: images/matt_hello_world.jpg
+image: images/christening.png
+comments: true
 ---
 
 ![]({{ site.baseurl }}/images/matt_hello_world.jpg "Hello, World!")
