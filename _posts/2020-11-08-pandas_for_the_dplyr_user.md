@@ -1,7 +1,7 @@
 ---
 keywords: fastai
-description: A tutorial for writing tidy pandas code inspired by R and the tidyverse
-title: pandas essentials for the tidyverse aficionado 
+description: An opinionated pandas tutorial to make the five most essential data transformation tasks feel more familiar to R and SQL users
+title: Pandas Data Transormation Essentials, as an R User Sees It
 toc: false
 badges: true
 comments: true
