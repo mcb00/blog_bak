@@ -4,19 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Pandas Data Transormation Essentials, as an R User Sees It | Random Realizations</title>
+<title>The 80/20 Pandas Tutorial: 5 Key Methods for the Majority of Your Data Transformation Needs | Random Realizations</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Pandas Data Transormation Essentials, as an R User Sees It" />
+<meta property="og:title" content="The 80/20 Pandas Tutorial: 5 Key Methods for the Majority of Your Data Transformation Needs" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An opinionated pandas tutorial to make the five most essential data transformation tasks feel more familiar to R and SQL users" />
-<meta property="og:description" content="An opinionated pandas tutorial to make the five most essential data transformation tasks feel more familiar to R and SQL users" />
-<link rel="canonical" href="https://mattcbowers.github.io/blog/pandas/tidyverse/2020/11/08/pandas_for_the_dplyr_user.html" />
-<meta property="og:url" content="https://mattcbowers.github.io/blog/pandas/tidyverse/2020/11/08/pandas_for_the_dplyr_user.html" />
+<meta name="description" content="An opinionated pandas tutorial on my preferred methods to accomplish the most essential data transformation tasks in a way that will make veteran R and tidyverse users smile." />
+<meta property="og:description" content="An opinionated pandas tutorial on my preferred methods to accomplish the most essential data transformation tasks in a way that will make veteran R and tidyverse users smile." />
+<link rel="canonical" href="https://mattcbowers.github.io/blog/pandas/tidyverse/2020/11/25/8020-pandas.html" />
+<meta property="og:url" content="https://mattcbowers.github.io/blog/pandas/tidyverse/2020/11/25/8020-pandas.html" />
 <meta property="og:site_name" content="Random Realizations" />
+<meta property="og:image" content="https://mattcbowers.github.io/blog/images/80_20_pandas.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-11-08T00:00:00-06:00" />
+<meta property="article:published_time" content="2020-11-25T00:00:00-06:00" />
 <script type="application/ld+json">
-{"description":"An opinionated pandas tutorial to make the five most essential data transformation tasks feel more familiar to R and SQL users","url":"https://mattcbowers.github.io/blog/pandas/tidyverse/2020/11/08/pandas_for_the_dplyr_user.html","@type":"BlogPosting","headline":"Pandas Data Transormation Essentials, as an R User Sees It","dateModified":"2020-11-08T00:00:00-06:00","datePublished":"2020-11-08T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mattcbowers.github.io/blog/pandas/tidyverse/2020/11/08/pandas_for_the_dplyr_user.html"},"@context":"https://schema.org"}</script>
+{"description":"An opinionated pandas tutorial on my preferred methods to accomplish the most essential data transformation tasks in a way that will make veteran R and tidyverse users smile.","url":"https://mattcbowers.github.io/blog/pandas/tidyverse/2020/11/25/8020-pandas.html","@type":"BlogPosting","headline":"The 80/20 Pandas Tutorial: 5 Key Methods for the Majority of Your Data Transformation Needs","dateModified":"2020-11-25T00:00:00-06:00","datePublished":"2020-11-25T00:00:00-06:00","image":"https://mattcbowers.github.io/blog/images/80_20_pandas.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://mattcbowers.github.io/blog/pandas/tidyverse/2020/11/25/8020-pandas.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mattcbowers.github.io/blog/feed.xml" title="Random Realizations" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,13 +72,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Pandas Data Transormation Essentials, as an R User Sees It</h1><p class="page-description">An opinionated pandas tutorial to make the five most essential data transformation tasks feel more familiar to R and SQL users</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-11-08T00:00:00-06:00" itemprop="datePublished">
-        Nov 8, 2020
+    <h1 class="post-title p-name" itemprop="name headline">The 80/20 Pandas Tutorial: 5 Key Methods for the Majority of Your Data Transformation Needs</h1><p class="page-description">An opinionated pandas tutorial on my preferred methods to accomplish the most essential data transformation tasks in a way that will make veteran R and tidyverse users smile.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-11-25T00:00:00-06:00" itemprop="datePublished">
+        Nov 25, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      12 min read
+      13 min read
     
 </span></p>
 
@@ -98,14 +99,14 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-wrap flex-justify-end">
           <div class="px-2">
 
-    <a href="https://github.com//blog/tree/master/_notebooks/2020-11-08-pandas_for_the_dplyr_user.ipynb" role="button" target="_blank">
+    <a href="https://github.com//blog/tree/master/_notebooks/2020-11-25-8020-pandas.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/blog/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           
           <div class="px-2">
-    <a href="https://colab.research.google.com/github//blog/blob/master/_notebooks/2020-11-08-pandas_for_the_dplyr_user.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github//blog/blob/master/_notebooks/2020-11-25-8020-pandas.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
@@ -117,17 +118,24 @@ window.onload = wrap_img;
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2020-11-08-pandas_for_the_dplyr_user.ipynb
+# file to edit: _notebooks/2020-11-25-8020-pandas.ipynb
 -->
 
 <div class="container" id="notebook-container">
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>You may have noticed that there are usually at least half a dozen ways to accomplish any given data transformation task in pandas.
-Having lots of options is great, because it gives us the freedom to adopt our own personal style.
-In this post we'll take a look at how we can establish a clean, readable, and easily understandable style for data transformation with pandas, inspired by R's tidyverse.</p>
-<p>In their book, <a href="https://r4ds.had.co.nz/">R for Data Science</a>, Garrett Grolemund and Hadley Wickham describe five essential tasks for working with dataframes.</p>
+<p><img src="/blog/images/copied_from_nb/nb_images/80_20_pandas.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ahh, pandas. In addition to being everyone's favorite vegetarian bear from south central China, it's also <em>the</em> python library for working with tabular data, a.k.a. dataframes.
+When you dive into pandas, you'll quickly find out that there is a lot going on; indeed there are <a href="https://pandas.pydata.org/docs/reference/frame.html">hundreds</a> of methods for operating on dataframes. But luckily for us, as with many areas of life, there is a <a href="https://en.wikipedia.org/wiki/Pareto_principle">Pareto Principle</a>, or 80/20 rule, that will help us focus on the small set of methods that collectively solve the majority of our data transformation needs.</p>
+<p>If you're like me, then pandas is not your first data-handling tool; maybe you've been using SQL or R with <code>data.table</code> or <code>dplyr</code>. If so, that's great because you already have a sense for the key operations we need when working with tabular data. 
+In their book, <a href="https://r4ds.had.co.nz/">R for Data Science</a>, Garrett Grolemund and Hadley Wickham describe five essential operations for manipulating dataframes. I've found that these cover the majority of my data transformation tasks to prepare data for analysis, visualization, and modeling.</p>
 <ol>
 <li>filtering rows based on data values</li>
 <li>sorting rows based on data values</li>
@@ -135,15 +143,8 @@ In this post we'll take a look at how we can establish a clean, readable, and ea
 <li>adding new columns based on the existing columns</li>
 <li>creating grouped summaries of the dataset</li>
 </ol>
-<p>We also need a way to build up more complex transformations by chaining these fundamental operations together.</p>
-<p>Before we dive in, here's the TLDR on the R functions and the corresponding pandas methods I use to accomplish those tasks.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Here's some other text.</p>
+<p>I would add that we also need a way to build up more complex transformations by chaining these fundamental operations together sequentially.</p>
+<p>Before we dive in, here's the TLDR on the pandas methods that I prefer for accomplishing these tasks, along with their equivalents from SQL and <code>dplyr</code> in R.</p>
 
 </div>
 </div>
@@ -153,40 +154,47 @@ In this post we'll take a look at how we can establish a clean, readable, and ea
 <table>
 <thead><tr>
 <th>description</th>
-<th>dplyr</th>
 <th>pandas</th>
+<th>SQL</th>
+<th>dplyr                   </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>filter rows based on data values</td>
-<td><code>filter()</code></td>
 <td><code>query()</code></td>
+<td><code>WHERE</code></td>
+<td><code>filter()</code>              </td>
 </tr>
 <tr>
 <td>sort rows based on data values</td>
-<td><code>arrange()</code></td>
 <td><code>sort_values()</code></td>
+<td><code>ORDER BY</code></td>
+<td><code>arrange()</code>             </td>
 </tr>
 <tr>
 <td>select columns by name</td>
-<td><code>select()</code></td>
 <td><code>filter()</code></td>
+<td><code>SELECT</code></td>
+<td><code>select()</code>              </td>
 </tr>
 <tr>
 <td>add new columns based on the existing columns</td>
-<td><code>mutate()</code></td>
 <td><code>assign()</code></td>
+<td><code>AS</code></td>
+<td><code>mutate()</code>              </td>
 </tr>
 <tr>
 <td>create grouped summaries of the dataset</td>
-<td><code>group_by()</code> <br /> <code>summarise()</code></td>
 <td><code>groupby()</code> <br /> <code>apply()</code></td>
+<td><code>GROUP BY</code></td>
+<td><code>group_by()</code> <br /> <code>summarise()</code></td>
 </tr>
 <tr>
 <td>chain operations together</td>
-<td><code>%&gt;%</code></td>
 <td><code>.</code></td>
+<td></td>
+<td><code>%&gt;%</code>                   </td>
 </tr>
 </tbody>
 </table>
@@ -1027,9 +1035,9 @@ But because of the kind of data I work with these days, it's much more common fo
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There you have it, how to pull off the five most essential data transformation tasks using pandas in a style that evokes the elegance of the tidyverse.
+<p>There you have it, how to pull off the five most essential data transformation tasks using pandas in a style reminiscent of my beloved <code>dplyr</code>.
 Remember that part of the beauty of pandas is that since there are so many ways to do most tasks, you can develop your own style based on the kind of data you work with, what you like about other tools, how you see others using the tools, and of course your own taste and preferences.</p>
-<p>So, what's <em>your</em> pandas style?</p>
+<p>If you found this post helpful or if you have your own preferred style for accomplishing any of these key transformations with pandas, do let me know about it in the comments.</p>
 
 </div>
 </div>
@@ -1046,7 +1054,7 @@ Remember that part of the beauty of pandas is that since there are so many ways 
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/blog/pandas/tidyverse/2020/11/08/pandas_for_the_dplyr_user.html" hidden></a>
+</script><a class="u-url" href="/blog/pandas/tidyverse/2020/11/25/8020-pandas.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
