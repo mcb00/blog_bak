@@ -10,6 +10,7 @@ title: Random Realizations
 description: A blog about data science, statistics, machine learning, and the scientific method.
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "blog"
+github_username: "mattcbowers"
 
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
