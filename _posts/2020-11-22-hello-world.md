@@ -6,7 +6,7 @@ title: Hello World! And Why I'm Inspired to Start a Blog
 description: A reflection on what inspired me to start a blog and three reasons I think it could be a good
  idea.
 categories: 
-image: images/christening.png
+image: images/matt_hello_world.jpg
 ---
 
 ![]({{ site.baseurl }}/images/matt_hello_world.jpg "Hello, World!")
@@ -56,4 +56,6 @@ Phew, there it is, the original source of inspiration for this blogging experime
 
 With that, blog, I christen thee, _Random Realizations_. 
 
-![]({{ site.baseurl }}/images/christening.png " ")
+<!--
+![]({{ site.baseurl }}/images/christening.png " ") 
+-->
