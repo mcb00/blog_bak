@@ -10,14 +10,14 @@ title: Random Realizations
 description: A blog about data science, statistics, machine learning, and the scientific method.
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "blog"
-github_username: "mattcbowers"
+github_username: "mcb00"
 
 # Permalinks
 permalink: /:year/:month/:day/:title
 
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
-url: "https://mattcbowers.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mcb00.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 ###########################################################
 #########  Special Instructions for baseurl ###############
@@ -43,7 +43,7 @@ baseurl: "/blog" # the subpath of your site, e.g. "/blog".
 minima:
   social_links:
     twitter: mcbwrs
-    github: mattcbowers
+    github: mcb00
 
 # Set this to true to get LaTeX math equation support
 use_math: 
