@@ -12,6 +12,9 @@ description: A blog about data science, statistics, machine learning, and the sc
 github_repo: "blog"
 github_username: "mattcbowers"
 
+# Permalinks
+permalink: /:year/:month/:day/:title
+
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
 url: "https://mattcbowers.github.io" # the base hostname & protocol for your site, e.g. http://example.com
